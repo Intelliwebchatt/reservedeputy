@@ -7,7 +7,7 @@ function App() {
 
   const handleSearch = async () => {
     try {
-      const result = await axios.post('/.netlify/functions/ask', { question: query });
+      const result = await axios.post('/.netlify/functions/openai', { question: query });
       setResponse(result.data.answer);
       setQuery(''); // Clear the input box after sending the request
     } catch (error) {
